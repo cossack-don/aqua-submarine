@@ -9,10 +9,11 @@ const actionUpdateState = (payload) => Object.assign(stateName,payload)
 
 1. SliceTypesName
 2. SliceInitialStatesName
-3. SliceAdapterName
-4. SliceMiddlewareName
-5. SliceControllerName or SliceStoreControllerName
-6. SliceViewName
+3. SliceApiName
+4. SliceAdapterName
+5. SliceMiddlewareName
+6. SliceControllerName or SliceStoreControllerName
+7. SliceViewName
 
 
 1. SliceViewModuleName - (SliceTypesName + SliceInitialStatesName + SliceControllerName) + (SliceTypesName + SliceInitialStatesName + SliceControllerName) = SliceControllerModuleName
