@@ -18,12 +18,30 @@ https://codesandbox.io/p/devbox/36d2vl
 | 1 отсек | 2 отсек | 3 отсек
 
 ```mermaid
-   flowchart LR
+flowchart TD
+    C{Submarine}
     
-     C{Submarine}
-    C -->|Палуба 1| D[SliceControllerModuleName] --> SliceFacadeName --> SliceAbstractionName --> SliceFactoryName
-    C -->|Палуба 0 | X[SliceTypesName] --> SliceInitialStates --> SliceApiName --> SliceAdapterName --> SliceStoreControllerName --> SliceViewName
-    C -->|Палуба -1| E[SliceMiddlewareName] --> SliceProviderName --> Webpack --> Unit_Tests
+    %% Палуба 1 (верхняя)
+    C --> |Палуба 1| D[SliceControllerModule]
+    D --> SliceFacade
+    SliceFacade --> SliceAbstraction
+    SliceAbstraction --> SliceFactory
+    
+    %% Палуба 0 (основная)
+    C --> |Палуба 0| X[SliceTypes]
+    X --> SliceInitialStates
+    SliceInitialStates --> SliceApi
+    SliceApi --> SliceAdapter
+    SliceAdapter --> SliceStoreController
+    SliceStoreController --> SliceView
+    
+    %% Палуба -1 (нижняя)
+    C --> |Палуба -1| E[SliceMiddleware]
+    E --> SliceProvider
+    SliceProvider --> Webpack
+    Webpack --> Unit_Tests
    
     
 ```
+
+
