@@ -24,3 +24,5 @@ Other
 - SliceFacade
 - SliceAbstraction
 - SliceFactory
+
+https://codesandbox.io/p/devbox/36d2vl
