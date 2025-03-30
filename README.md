@@ -38,8 +38,7 @@ flowchart TD
     %% Палуба -1 (нижняя)
     C --> |Палуба -1| E[SliceMiddleware]
     E --> SliceProvider
-    SliceProvider --> Webpack
-    Webpack --> Unit_Tests
+    SliceProvider
    
     
 ```
