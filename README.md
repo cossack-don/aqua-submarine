@@ -7,22 +7,23 @@ prefix - action fro actions
 const actionUpdateState = (payload) => Object.assign(stateName,payload)
 
 
-1. SliceTypesName
-2. SliceInitialStatesName
-3. SliceApiName
-4. SliceAdapterName
-5. SliceMiddlewareName
-6. SliceControllerName or SliceStoreControllerName
-7. SliceViewName
-
-
 1. SliceViewModuleName - (SliceTypesName + SliceInitialStatesName + SliceControllerName) + (SliceTypesName + SliceInitialStatesName + SliceControllerName) = SliceControllerModuleName
 2. SliceControllerModuleName
 
-Other
-- SliceProviderName
-- SliceFacade
-- SliceAbstraction
-- SliceFactory
-
 https://codesandbox.io/p/devbox/36d2vl
+
+
+Архитектура подводной лодки/судна
+- 1 палуба - 0 палуба - (-1 палуба)
+| 1 отсек | 2 отсек | 3 отсек
+
+```mermaid
+   flowchart LR
+    
+     C{Submarine}
+    C -->|Палуба 1| D[SliceControllerModuleName] --> SliceFacadeName --> SliceAbstractionName --> SliceFactoryName
+    C -->|Палуба 0 | X[SliceTypesName] --> SliceInitialStates --> SliceApiName --> SliceAdapterName --> SliceStoreControllerName --> SliceViewName
+    C -->|Палуба -1| E[SliceMiddlewareName] --> SliceProviderName --> Webpack --> Unit_Tests
+   
+    
+```
