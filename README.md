@@ -26,7 +26,8 @@ flowchart TD
     D --> SliceFacade
     SliceFacade --> SliceAbstraction
     SliceAbstraction --> SliceFactory
-    
+    SliceFactory --> SliceInjection
+
     %% Палуба 0 (основная)
     C --> |Палуба 0| X[SliceTypes]
     X --> SliceInitialStates
