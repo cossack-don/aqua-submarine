@@ -10,7 +10,7 @@ draft - https://codesandbox.io/p/devbox/36d2vl
 - prefix is - boolean true/false example -> isSaveList
 - prefix map - карта, объект {} example -> mapStatuses
 - prefix list - массив [] example -> listServices
-- 
+  
 ## Ценность 
 1. Простота использования
 2. Разделение Slices каждую зону ответственности, можно добавить легко новый слой и так же убрать
